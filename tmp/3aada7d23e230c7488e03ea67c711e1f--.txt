@@ -1,0 +1,27 @@
+{
+  "hash": "3aada7d23e230c7488e03ea67c711e1f",
+  "components": {
+    "useragent": {
+      "browser": {
+        "family": "Chrome",
+        "version": "86"
+      },
+      "device": {
+        "family": "Other",
+        "version": "0"
+      },
+      "os": {
+        "family": "Windows",
+        "major": "10",
+        "minor": "0"
+      }
+    },
+    "acceptHeaders": {
+      "accept": "image/avif,image/webp,image/apng,image/*,*/*;q=0.8",
+      "language": "en-US,en;q=0.9"
+    },
+    "geoip": {
+      "country": null
+    }
+  }
+}
