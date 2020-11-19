@@ -4,7 +4,6 @@
     <title>Socket.IO chat</title>
     <style>
       * {
-        margin: 0;
         padding: 0;
         box-sizing: border-box;
       }
@@ -504,50 +503,6 @@
     <script src="/socket.io/socket.io.js"></script>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 
-    <!-- <script>
-      var btn = document.querySelector("button");
-      var bd = document.querySelector("body");
-      // $(function () {
-      var socket = io();
-      $("form").submit(function (e) {
-        e.preventDefault(); // prevents page reloading
-        let action = "user input given " + $("#m").val();
-        socket.emit("user activity", action);
-        return false;
-      });
-      // });
-      clickHandler = (e) => {
-        console.log(e.target.nodeName);
-        let action = "user clicked on the " + e.target.nodeName;
-        console.log(action);
-        socket.emit("user activity", action);
-      };
-
-      bd.onload = (e) => {
-        let action = "currently on page " + e.srcElement.URL;
-        socket.emit("user activity", action);
-      };
-
-      keypress = (e) => {
-        let action = "user pressed the key -> " + e.key;
-        console.log(action);
-        socket.emit("user activity", action);
-      };
-
-      bd.addEventListener("click", clickHandler);
-      bd.addEventListener("keypress", keypress);
-
-      window.onscroll = function () {
-        myFunction();
-      };
-
-      function myFunction() {
-        let scroll = document.documentElement.scrollTop;
-        scroll = Math.floor(scroll);
-        let action = "user scrolled the page by " + scroll + " pixels";
-        if (scroll % 50 === 0) socket.emit("user activity", action);
-      }
-    </script> -->
-    <script src="../html/js/script.js"></script>
+    <script src="/frontend/html/js/script.js"></script>
   </body>
 </html>

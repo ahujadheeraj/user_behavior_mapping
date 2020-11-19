@@ -1,0 +1,42 @@
+{
+  "user_details": {
+    "start_time": "Sat Nov 07 2020 17:44:01 GMT+0530 (India Standard Time)",
+    "fingerprint": {
+      "hash": "3aada7d23e230c7488e03ea67c711e1f",
+      "components": {
+        "useragent": {
+          "browser": {
+            "family": "Chrome",
+            "version": "86"
+          },
+          "device": {
+            "family": "Other",
+            "version": "0"
+          },
+          "os": {
+            "family": "Windows",
+            "major": "10",
+            "minor": "0"
+          }
+        },
+        "acceptHeaders": {
+          "accept": "image/avif,image/webp,image/apng,image/*,*/*;q=0.8",
+          "language": "en-US,en;q=0.9"
+        },
+        "geoip": {
+          "country": null
+        }
+      }
+    },
+    "window_size": {
+      "height": 758,
+      "width": 1348
+    },
+    "window_pos": {
+      "top": 0,
+      "left": 0
+    },
+    "end_time": "Sat Nov 07 2020 19:06:26 GMT+0530 (India Standard Time)"
+  },
+  "user_actions": []
+}

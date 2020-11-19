@@ -1,32 +1,33 @@
 var btn = document.querySelector("button");
 var bd = document.querySelector("body");
-$(function () {
-  var socket = io();
-  alert("connected");
-  $("form").submit(function (e) {
-    e.preventDefault(); // prevents page reloading
-    socket.emit("chat message", $("#m").val());
-    $("#m").val("");
-    return false;
-  });
-});
+
+var socket = io();
+
 clickHandler = (e) => {
-  /*console.log(e.originalTarget);
-    console.log(e.originalTarget.firstChild.nodeValue)*/
-  let action =
-    "user clicked on the " +
-    e.originalTarget.tagName +
-    e.originalTarget.firstChild.nodeValue;
+  e.preventDefault();
+  let action = { x: e.clientX, y: e.clientY };
   console.log(action);
+  socket.emit("click", action);
 };
 
 bd.onload = (e) => {
   console.log("source is " + e.srcElement.URL);
   console.log("destination is " + e.target.URL);
+  window_size = {};
+  window_size["height"] = window.screen.height;
+  window_size["width"] = window.screen.width;
+  window_pos = {};
+  window_pos["top"] = window.screenY;
+  window_pos["left"] = window.screenX;
+  console.log(window_pos);
+  console.log(window_size);
+  socket.emit("window_size", window_size);
+  socket.emit("window_pos", window_pos);
 };
 
 keypress = (e) => {
-  console.log("keypressed by user " + e.key);
+  let action = e.key;
+  socket.emit("keypress", action);
 };
 
 bd.addEventListener("click", clickHandler);
@@ -39,3 +40,14 @@ function locationHashChanged(e) {
 }
 
 window.addEventListener("locationchange", locationHashChanged);
+
+window.onscroll = function () {
+  myFunction();
+};
+
+function myFunction() {
+  let scroll = document.documentElement.scrollTop;
+  scroll = Math.floor(scroll);
+  let action = "user scrolled the page to " + scroll + " pixels from top";
+  if (scroll % 10 === 0) socket.emit("user activity", action);
+}

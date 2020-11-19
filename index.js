@@ -5,18 +5,23 @@ var io = require("socket.io")(http);
 var path = require("path");
 var Fingerprint = require("express-fingerprint");
 var fs = require("fs");
-const expressip = require("express-ip");
 
 app.use("/frontend", express.static(path.join(__dirname, "/frontend")));
-app.use(expressip().getIpInfoMiddleware);
 
 app.get("/", (req, res) => {
   res.sendFile(__dirname + "/frontend/html/index.html");
 });
+
+let temp_data = {
+  user_details: {},
+  user_actions: [],
+};
+let filename = "";
+
+//code for fingerprint
 app.use(
   Fingerprint({
     parameters: [
-      // Defaults
       Fingerprint.useragent,
       Fingerprint.acceptHeaders,
       Fingerprint.geoip,
@@ -25,18 +30,52 @@ app.use(
 );
 
 app.get("*", function (req, res, next) {
-  // Fingerprint object
-  console.log(req.fingerprint);
-  console.log(req.ipInfo);
-  let myfiledata = req.fingerprint;
+  temp_data.user_details.fingerprint = req.fingerprint;
+  filename = req.fingerprint.hash;
+  console.log("from 35");
+});
 
-  let ipAdd = req.ipInfo.ip;
-  if (ipAdd == "::1") {
-    ipAdd = "localhost";
-  } else {
+io.on("connection", (socket) => {
+  var start_time = new Date();
+  let ref_time = start_time;
+  temp_data.user_details["start_time"] = ref_time.toString();
+  console.log("from 42");
+
+  socket.on("keypress", (action) => {
+    temp_data.user_actions.push({
+      time: Math.abs(new Date() - ref_time) / 1000,
+      action: "send_keys",
+      value: action,
+    });
+    ref_time = new Date();
+  });
+
+  socket.on("click", (action) => {
+    temp_data.user_actions.push({
+      time: Math.abs(new Date() - ref_time) / 1000,
+      action: "click",
+      value: action,
+    });
+    ref_time = new Date();
+  });
+
+  socket.on("window_size", (action) => {
+    temp_data.user_details["window_size"] = action;
+    console.log("window_size");
+  });
+
+  socket.on("window_pos", (action) => {
+    temp_data.user_details["window_pos"] = action;
+    console.log("window_pos");
+  });
+
+  socket.on("disconnect", () => {
+    console.log("user disconnected at " + new Date().toString());
+    temp_data.user_details["end_time"] = new Date().toString();
+    console.log(temp_data);
     fs.writeFile(
-      "tmp/" + ipAdd + "->" + req.fingerprint.hash + ".txt",
-      JSON.stringify(req.fingerprint, null, 2),
+      "tmp/" + filename + ".json",
+      JSON.stringify(temp_data, null, 2),
       function (err) {
         if (err) {
           console.log(err);
@@ -45,16 +84,6 @@ app.get("*", function (req, res, next) {
         }
       }
     );
-  }
-});
-
-io.on("connection", (socket) => {
-  console.log(".......connection established........");
-  socket.on("user activity", (action) => {
-    console.log("Action: " + action);
-  });
-  socket.on("disconnect", () => {
-    console.log("user disconnected");
   });
 });
 
