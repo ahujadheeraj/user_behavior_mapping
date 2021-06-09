@@ -1,5 +1,5 @@
 var btn = document.querySelector("button");
-var bd = document.querySelector("body");
+var body = document.querySelector("body");
 
 var socket = io();
 
@@ -10,7 +10,7 @@ clickHandler = (e) => {
   socket.emit("click", action);
 };
 
-bd.onload = (e) => {
+body.onload = (e) => {
   console.log("source is " + e.srcElement.URL);
   console.log("destination is " + e.target.URL);
   window_size = {};
@@ -27,27 +27,28 @@ bd.onload = (e) => {
 
 keypress = (e) => {
   let action = e.key;
+  console.log(e);
   socket.emit("keypress", action);
 };
 
-bd.addEventListener("click", clickHandler);
-bd.addEventListener("keypress", keypress);
+body.addEventListener("click", clickHandler);
+body.addEventListener("keypress", keypress);
 
 function locationHashChanged(e) {
   console.log(location.hash);
   console.log(e.oldURL, e.newURL);
-  alert("hi");
 }
 
 window.addEventListener("locationchange", locationHashChanged);
 
 window.onscroll = function () {
-  myFunction();
+  scrollFunction();
 };
 
-function myFunction() {
+function scrollFunction() {
   let scroll = document.documentElement.scrollTop;
   scroll = Math.floor(scroll);
   let action = "user scrolled the page to " + scroll + " pixels from top";
-  if (scroll % 10 === 0) socket.emit("user activity", action);
+  socket.emit("scroll", scroll);
+  console.log(action);
 }

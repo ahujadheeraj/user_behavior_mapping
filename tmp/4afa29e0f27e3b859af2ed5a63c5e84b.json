@@ -1,0 +1,83 @@
+{
+  "user_details": {
+    "start_time": "Wed Jun 09 2021 11:03:11 GMT+0530 (India Standard Time)",
+    "fingerprint": {
+      "hash": "4afa29e0f27e3b859af2ed5a63c5e84b",
+      "components": {
+        "useragent": {
+          "browser": {
+            "family": "Chrome",
+            "version": "91"
+          },
+          "device": {
+            "family": "Other",
+            "version": "0"
+          },
+          "os": {
+            "family": "Windows",
+            "major": "10",
+            "minor": "0"
+          }
+        },
+        "acceptHeaders": {
+          "language": "en-US,en;q=0.9"
+        },
+        "geoip": {
+          "country": null
+        }
+      }
+    },
+    "window_size": {
+      "height": 758,
+      "width": 1348
+    },
+    "window_pos": {
+      "top": 0,
+      "left": 0
+    },
+    "end_time": "Wed Jun 09 2021 11:04:39 GMT+0530 (India Standard Time)"
+  },
+  "user_actions": [
+    {
+      "time": 10961,
+      "action": "click",
+      "value": {
+        "x": 460,
+        "y": 317
+      }
+    },
+    {
+      "time": 1217,
+      "action": "send_keys",
+      "value": "d"
+    },
+    {
+      "time": 227,
+      "action": "send_keys",
+      "value": "e"
+    },
+    {
+      "time": 219,
+      "action": "send_keys",
+      "value": "l"
+    },
+    {
+      "time": 263,
+      "action": "send_keys",
+      "value": "h"
+    },
+    {
+      "time": 135,
+      "action": "send_keys",
+      "value": "i"
+    },
+    {
+      "time": 2023,
+      "action": "click",
+      "value": {
+        "x": 1094,
+        "y": 373
+      }
+    }
+  ]
+}

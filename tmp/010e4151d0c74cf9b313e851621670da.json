@@ -1,0 +1,619 @@
+{
+  "user_details": {
+    "start_time": "Sat Jun 05 2021 21:26:13 GMT+0530 (India Standard Time)",
+    "fingerprint": {
+      "hash": "010e4151d0c74cf9b313e851621670da",
+      "components": {
+        "useragent": {
+          "browser": {
+            "family": "Chrome",
+            "version": "90"
+          },
+          "device": {
+            "family": "Other",
+            "version": "0"
+          },
+          "os": {
+            "family": "Windows",
+            "major": "10",
+            "minor": "0"
+          }
+        },
+        "acceptHeaders": {
+          "accept": "*/*",
+          "language": "en-US,en;q=0.9"
+        },
+        "geoip": {
+          "country": null
+        }
+      }
+    },
+    "window_size": {
+      "height": 758,
+      "width": 1348
+    },
+    "window_pos": {
+      "top": 9,
+      "left": 9
+    },
+    "end_time": "Sat Jun 05 2021 21:52:27 GMT+0530 (India Standard Time)"
+  },
+  "user_actions": [
+    {
+      "time": 6782,
+      "action": "click",
+      "value": {
+        "x": 372,
+        "y": 313
+      }
+    },
+    {
+      "time": 1624,
+      "action": "send_keys",
+      "value": "m"
+    },
+    {
+      "time": 285,
+      "action": "send_keys",
+      "value": "a"
+    },
+    {
+      "time": 252,
+      "action": "send_keys",
+      "value": "n"
+    },
+    {
+      "time": 236,
+      "action": "send_keys",
+      "value": "a"
+    },
+    {
+      "time": 730,
+      "action": "send_keys",
+      "value": "l"
+    },
+    {
+      "time": 250,
+      "action": "send_keys",
+      "value": "i"
+    },
+    {
+      "time": 2341,
+      "action": "click",
+      "value": {
+        "x": 765,
+        "y": 326
+      }
+    },
+    {
+      "time": 2586,
+      "action": "click",
+      "value": {
+        "x": 733,
+        "y": 465
+      }
+    },
+    {
+      "time": 1383,
+      "action": "click",
+      "value": {
+        "x": 957,
+        "y": 331
+      }
+    },
+    {
+      "time": 2397,
+      "action": "click",
+      "value": {
+        "x": 1086,
+        "y": 472
+      }
+    },
+    {
+      "time": 1585,
+      "action": "click",
+      "value": {
+        "x": 457,
+        "y": 397
+      }
+    },
+    {
+      "time": 1837,
+      "action": "click",
+      "value": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "time": 1473,
+      "action": "click",
+      "value": {
+        "x": 566,
+        "y": 383
+      }
+    },
+    {
+      "time": 1547,
+      "action": "click",
+      "value": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "time": 1231,
+      "action": "click",
+      "value": {
+        "x": 789,
+        "y": 379
+      }
+    },
+    {
+      "time": 1222,
+      "action": "click",
+      "value": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "time": 1466,
+      "action": "click",
+      "value": {
+        "x": 1022,
+        "y": 377
+      }
+    },
+    {
+      "time": 7790,
+      "action": "click",
+      "value": {
+        "x": 372,
+        "y": 313
+      }
+    },
+    {
+      "time": 1454,
+      "action": "send_keys",
+      "value": "m"
+    },
+    {
+      "time": 257,
+      "action": "send_keys",
+      "value": "a"
+    },
+    {
+      "time": 223,
+      "action": "send_keys",
+      "value": "n"
+    },
+    {
+      "time": 229,
+      "action": "send_keys",
+      "value": "a"
+    },
+    {
+      "time": 733,
+      "action": "send_keys",
+      "value": "l"
+    },
+    {
+      "time": 244,
+      "action": "send_keys",
+      "value": "i"
+    },
+    {
+      "time": 1992,
+      "action": "click",
+      "value": {
+        "x": 765,
+        "y": 326
+      }
+    },
+    {
+      "time": 2573,
+      "action": "click",
+      "value": {
+        "x": 733,
+        "y": 465
+      }
+    },
+    {
+      "time": 1359,
+      "action": "click",
+      "value": {
+        "x": 957,
+        "y": 331
+      }
+    },
+    {
+      "time": 2383,
+      "action": "click",
+      "value": {
+        "x": 1086,
+        "y": 472
+      }
+    },
+    {
+      "time": 1503,
+      "action": "click",
+      "value": {
+        "x": 457,
+        "y": 397
+      }
+    },
+    {
+      "time": 1831,
+      "action": "click",
+      "value": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "time": 1468,
+      "action": "click",
+      "value": {
+        "x": 566,
+        "y": 383
+      }
+    },
+    {
+      "time": 1528,
+      "action": "click",
+      "value": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "time": 1209,
+      "action": "click",
+      "value": {
+        "x": 789,
+        "y": 379
+      }
+    },
+    {
+      "time": 1218,
+      "action": "click",
+      "value": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "time": 1491,
+      "action": "click",
+      "value": {
+        "x": 1022,
+        "y": 377
+      }
+    },
+    {
+      "time": 7209,
+      "action": "click",
+      "value": {
+        "x": 372,
+        "y": 313
+      }
+    },
+    {
+      "time": 1465,
+      "action": "send_keys",
+      "value": "m"
+    },
+    {
+      "time": 267,
+      "action": "send_keys",
+      "value": "a"
+    },
+    {
+      "time": 241,
+      "action": "send_keys",
+      "value": "n"
+    },
+    {
+      "time": 232,
+      "action": "send_keys",
+      "value": "a"
+    },
+    {
+      "time": 726,
+      "action": "send_keys",
+      "value": "l"
+    },
+    {
+      "time": 238,
+      "action": "send_keys",
+      "value": "i"
+    },
+    {
+      "time": 1826,
+      "action": "click",
+      "value": {
+        "x": 765,
+        "y": 326
+      }
+    },
+    {
+      "time": 2568,
+      "action": "click",
+      "value": {
+        "x": 733,
+        "y": 465
+      }
+    },
+    {
+      "time": 1356,
+      "action": "click",
+      "value": {
+        "x": 957,
+        "y": 331
+      }
+    },
+    {
+      "time": 2370,
+      "action": "click",
+      "value": {
+        "x": 1086,
+        "y": 472
+      }
+    },
+    {
+      "time": 1483,
+      "action": "click",
+      "value": {
+        "x": 457,
+        "y": 397
+      }
+    },
+    {
+      "time": 1799,
+      "action": "click",
+      "value": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "time": 1463,
+      "action": "click",
+      "value": {
+        "x": 566,
+        "y": 383
+      }
+    },
+    {
+      "time": 1501,
+      "action": "click",
+      "value": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "time": 1203,
+      "action": "click",
+      "value": {
+        "x": 789,
+        "y": 379
+      }
+    },
+    {
+      "time": 1198,
+      "action": "click",
+      "value": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "time": 1465,
+      "action": "click",
+      "value": {
+        "x": 1022,
+        "y": 377
+      }
+    },
+    {
+      "time": 171466,
+      "action": "click",
+      "value": {
+        "x": 940,
+        "y": 28
+      }
+    },
+    {
+      "time": 1299,
+      "action": "click",
+      "value": {
+        "x": 1061,
+        "y": 30
+      }
+    },
+    {
+      "time": 1046,
+      "action": "click",
+      "value": {
+        "x": 1217,
+        "y": 34
+      }
+    },
+    {
+      "time": 2523,
+      "action": "click",
+      "value": {
+        "x": 785,
+        "y": 57
+      }
+    },
+    {
+      "time": 1989,
+      "action": "click",
+      "value": {
+        "x": 277,
+        "y": 58
+      }
+    },
+    {
+      "time": 3660,
+      "action": "click",
+      "value": {
+        "x": 1224,
+        "y": 51
+      }
+    },
+    {
+      "time": 2122,
+      "action": "click",
+      "value": {
+        "x": 755,
+        "y": 43
+      }
+    },
+    {
+      "time": 8203,
+      "action": "click",
+      "value": {
+        "x": 372,
+        "y": 313
+      }
+    },
+    {
+      "time": 1854,
+      "action": "send_keys",
+      "value": "m"
+    },
+    {
+      "time": 432,
+      "action": "send_keys",
+      "value": "a"
+    },
+    {
+      "time": 220,
+      "action": "send_keys",
+      "value": "n"
+    },
+    {
+      "time": 219,
+      "action": "send_keys",
+      "value": "a"
+    },
+    {
+      "time": 712,
+      "action": "send_keys",
+      "value": "l"
+    },
+    {
+      "time": 277,
+      "action": "send_keys",
+      "value": "i"
+    },
+    {
+      "time": 4616,
+      "action": "click",
+      "value": {
+        "x": 765,
+        "y": 326
+      }
+    },
+    {
+      "time": 2551,
+      "action": "click",
+      "value": {
+        "x": 733,
+        "y": 465
+      }
+    },
+    {
+      "time": 1344,
+      "action": "click",
+      "value": {
+        "x": 957,
+        "y": 331
+      }
+    },
+    {
+      "time": 2367,
+      "action": "click",
+      "value": {
+        "x": 1086,
+        "y": 472
+      }
+    },
+    {
+      "time": 1567,
+      "action": "click",
+      "value": {
+        "x": 457,
+        "y": 397
+      }
+    },
+    {
+      "time": 1757,
+      "action": "click",
+      "value": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "time": 1394,
+      "action": "click",
+      "value": {
+        "x": 566,
+        "y": 383
+      }
+    },
+    {
+      "time": 1458,
+      "action": "click",
+      "value": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "time": 1130,
+      "action": "click",
+      "value": {
+        "x": 789,
+        "y": 379
+      }
+    },
+    {
+      "time": 1161,
+      "action": "click",
+      "value": {
+        "x": 0,
+        "y": 0
+      }
+    },
+    {
+      "time": 1464,
+      "action": "click",
+      "value": {
+        "x": 1022,
+        "y": 377
+      }
+    },
+    {
+      "time": 203992,
+      "action": "click",
+      "value": {
+        "x": 785,
+        "y": 95
+      }
+    },
+    {
+      "time": 1479,
+      "action": "click",
+      "value": {
+        "x": 1058,
+        "y": 33
+      }
+    }
+  ]
+}

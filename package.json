@@ -4,10 +4,12 @@
   "description": "socket.io app",
   "dependencies": {
     "@fingerprintjs/fingerprintjs": "^3.0.0",
+    "axios": "^0.21.1",
     "clientjs": "^0.1.11",
     "express": "^4.17.1",
     "express-fingerprint": "^1.2.2",
     "express-ip": "^1.0.4",
+    "mongoose": "^5.12.13",
     "ngrok": "^3.3.0",
     "nodemon": "^2.0.6",
     "request-ip": "^2.1.3",

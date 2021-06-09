@@ -3,8 +3,10 @@ var app = express();
 var http = require("http").createServer(app);
 var io = require("socket.io")(http);
 var path = require("path");
+const connectDB = require("./DB/connection");
 var Fingerprint = require("express-fingerprint");
 var fs = require("fs");
+const axios = require("axios");
 
 app.use("/frontend", express.static(path.join(__dirname, "/frontend")));
 
@@ -12,9 +14,13 @@ app.get("/", (req, res) => {
   res.sendFile(__dirname + "/frontend/html/index.html");
 });
 
+connectDB();
+app.use(express.json({ extended: true }));
+app.use("/api/user_files_model", require("./Api/User_files"));
+
 let temp_data = {
-  user_details: {},
-  user_actions: [],
+  user_details: {}, //object
+  user_actions: [], //array
 };
 let filename = "";
 
@@ -32,19 +38,26 @@ app.use(
 app.get("*", function (req, res, next) {
   temp_data.user_details.fingerprint = req.fingerprint;
   filename = req.fingerprint.hash;
-  console.log("from 35");
 });
 
 io.on("connection", (socket) => {
   var start_time = new Date();
   let ref_time = start_time;
   temp_data.user_details["start_time"] = ref_time.toString();
-  console.log("from 42");
 
   socket.on("keypress", (action) => {
     temp_data.user_actions.push({
-      time: Math.abs(new Date() - ref_time) / 1000,
+      time: Math.abs(new Date() - ref_time),
       action: "send_keys",
+      value: action,
+    });
+    ref_time = new Date();
+  });
+
+  socket.on("scroll", (action) => {
+    temp_data.user_actions.push({
+      time: Math.abs(new Date() - ref_time),
+      action: "scroll",
       value: action,
     });
     ref_time = new Date();
@@ -52,7 +65,7 @@ io.on("connection", (socket) => {
 
   socket.on("click", (action) => {
     temp_data.user_actions.push({
-      time: Math.abs(new Date() - ref_time) / 1000,
+      time: Math.abs(new Date() - ref_time),
       action: "click",
       value: action,
     });
@@ -72,8 +85,14 @@ io.on("connection", (socket) => {
   socket.on("disconnect", () => {
     console.log("user disconnected at " + new Date().toString());
     temp_data.user_details["end_time"] = new Date().toString();
-    console.log(temp_data);
-    fs.writeFile(
+    JSON.stringify(temp_data, null, 2),
+      //console.log(temp_data);
+      axios
+        .post("http://localhost:5000/api/user_files_model", temp_data)
+        .then((res) => console.log("ur file is saved to db...."))
+        .catch((err) => console.error(err));
+
+    /*    fs.writeFile(
       "tmp/" + filename + ".json",
       JSON.stringify(temp_data, null, 2),
       function (err) {
@@ -83,10 +102,10 @@ io.on("connection", (socket) => {
           console.log("The file was saved!");
         }
       }
-    );
+    );*/
   });
 });
 
-http.listen(3000, () => {
-  console.log("listening on *:3000");
+http.listen(5000, () => {
+  console.log("listening on *:5000");
 });

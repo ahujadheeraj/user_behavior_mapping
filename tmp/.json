@@ -1,7 +1,15 @@
 {
   "user_details": {
-    "start_time": "Thu Nov 19 2020 08:32:06 GMT+0530 (India Standard Time)",
-    "end_time": "Thu Nov 19 2020 08:32:11 GMT+0530 (India Standard Time)"
+    "start_time": "Wed Dec 02 2020 17:03:44 GMT+0530 (India Standard Time)",
+    "window_size": {
+      "height": 758,
+      "width": 1348
+    },
+    "window_pos": {
+      "top": 0,
+      "left": 0
+    },
+    "end_time": "Wed Dec 02 2020 17:03:45 GMT+0530 (India Standard Time)"
   },
   "user_actions": []
 }

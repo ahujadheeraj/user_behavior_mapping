@@ -1,0 +1,41 @@
+{
+  "user_details": {
+    "start_time": "Sat Jun 05 2021 12:57:36 GMT+0530 (India Standard Time)",
+    "fingerprint": {
+      "hash": "0756c0e9bc21c3b6bcd1936abdfa8988",
+      "components": {
+        "useragent": {
+          "browser": {
+            "family": "Chrome",
+            "version": "90"
+          },
+          "device": {
+            "family": "Other",
+            "version": "0"
+          },
+          "os": {
+            "family": "Windows",
+            "major": "10",
+            "minor": "0"
+          }
+        },
+        "acceptHeaders": {
+          "language": "en-US,en;q=0.9"
+        },
+        "geoip": {
+          "country": null
+        }
+      }
+    },
+    "window_size": {
+      "height": 758,
+      "width": 1348
+    },
+    "window_pos": {
+      "top": 9,
+      "left": 9
+    },
+    "end_time": "Sat Jun 05 2021 12:59:14 GMT+0530 (India Standard Time)"
+  },
+  "user_actions": []
+}

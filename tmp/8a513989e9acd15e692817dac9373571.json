@@ -1,0 +1,34 @@
+{
+  "user_details": {
+    "fingerprint": {
+      "hash": "8a513989e9acd15e692817dac9373571",
+      "components": {
+        "useragent": {
+          "browser": {
+            "family": "Firefox",
+            "version": "82"
+          },
+          "device": {
+            "family": "Other",
+            "version": "0"
+          },
+          "os": {
+            "family": "Linux",
+            "major": "0",
+            "minor": "0"
+          }
+        },
+        "acceptHeaders": {
+          "accept": "image/webp,*/*",
+          "language": "en-US,en;q=0.5"
+        },
+        "geoip": {
+          "country": null
+        }
+      }
+    },
+    "start_time": "Thu Dec 03 2020 17:45:53 GMT+0530 (IST)",
+    "end_time": "Thu Dec 03 2020 17:49:47 GMT+0530 (IST)"
+  },
+  "user_actions": []
+}
