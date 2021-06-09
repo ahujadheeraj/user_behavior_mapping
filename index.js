@@ -8,6 +8,8 @@ var Fingerprint = require("express-fingerprint");
 var fs = require("fs");
 const axios = require("axios");
 
+const port = process.env.PORT || 5000;
+
 app.use("/frontend", express.static(path.join(__dirname, "/frontend")));
 
 app.get("/", (req, res) => {
@@ -106,6 +108,6 @@ io.on("connection", (socket) => {
   });
 });
 
-http.listen(5000, () => {
+http.listen(port, () => {
   console.log("listening on *:5000");
 });
