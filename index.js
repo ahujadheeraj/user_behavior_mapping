@@ -90,7 +90,7 @@ io.on("connection", (socket) => {
     JSON.stringify(temp_data, null, 2),
       //console.log(temp_data);
       axios
-        .post("http://localhost:5000/api/user_files_model", temp_data)
+        .post("http://" + port + "/api/user_files_model", temp_data)
         .then((res) => console.log("ur file is saved to db...."))
         .catch((err) => console.error(err));
 
